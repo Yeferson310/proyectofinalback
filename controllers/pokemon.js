@@ -33,3 +33,14 @@ exports.addpokemon = (req, res) => {
     pokemones.push(nuevoPokemon)
     res.status(200).json(pokemones)
 };
+
+exports.deletepokemon = (req, res) => {
+    const eliminarPokemon = (req.params.id)
+    const eliminado = pokemones.find((pokemon) => pokemon.id === id)
+    if (eliminado) {
+        res.status(400).json({
+            error: 'el id seleccionado no se puede eliminar: ${id}'
+        })
+    }
+    res.json(eliminado)
+}
