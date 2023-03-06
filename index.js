@@ -1,6 +1,5 @@
 const bodyParser = require("body-parser")
 const express = require("express")
-const mongoose = require('mongoose');
 const morgan = require("morgan")
 const cors = require("cors")
 const cookieParser = require("cookie-parser")
@@ -37,13 +36,13 @@ app.listen(port, () => {
 })
 
 
-// conexion a base de datos
-const uri = `mongodb+srv://${process.env.USER}:${process.env.PASSWORD}@cluster0.ncdk5.mongodb.net/${process.env.DBNAME}?retryWrites=true&w=majority`;
-mongoose.connect(uri,
+/* conexion a base de datos, esto no va porque esta conectado con mongo y es con postgres
+const uri = `postgres+srv://${process.env.USER}:${process.env.PASSWORD}@cluster0.ncdk5.mongodb.net/${process.env.DBNAME}?retryWrites=true&w=majority`;
+postgres.connect(uri,
     { useNewUrlParser: true, useUnifiedTopology: true }
 )
     .then(() => console.log('Base de datos conectada'))
-    .catch(e => console.log('error db:', e))
+    .catch(e => console.log('error db:', e)) */
 
 
 
