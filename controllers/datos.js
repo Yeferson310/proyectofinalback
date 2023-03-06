@@ -11,7 +11,7 @@ exports.list = (req, res) => {
     res.json(USUARIOS)
 }
 
-// esta es la verificacion de que el usuario exsiste 
+// esta es la verificacion de que el usuario exsiste, MECANISMO DE AUTENTICACION
 exports.searchUsuario = (req, res) => {
     const CI = Number(req.params.CI)
     const result = USUARIOS.find((Usuario) => Usuario.CI === CI)

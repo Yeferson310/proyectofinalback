@@ -1,3 +1,5 @@
+//integracion del front con el nuevo servidor parte 2//
+
 const express = require("express")
 const { list, addpokemon, searchpokemon } = require("../controllers/pokemon")
 const router = express.Router()
